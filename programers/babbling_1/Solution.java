@@ -21,10 +21,10 @@ class SolutionEx {
     public static void main(String[] args) {
 
         String[] test1 = {"aya", "yee", "u", "maa", "wyeoo"};
-        String[] test2 = {"ayaye", "uuuma", "ye", "yemawoo", "ayaa"};
+        String[] test2 = {"ayaye", "uuuma", "yeye", "yemawoo", "ayaa"};
 
         Solution sol = new Solution();
 
-        System.out.println(sol.solution(test1));
+        System.out.println(sol.solution(test2));
     }
 }
