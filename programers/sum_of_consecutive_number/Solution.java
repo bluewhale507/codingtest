@@ -7,7 +7,7 @@ class Solution {
     public int[] solution(int num, int total) {
         int add = 0;
         int x = 0;
-        int[] answer = new int[3];
+        int[] answer = new int[num];
 
         for(int i=0;i<num;i++){ add += i; }
         x = (total - add)/num;
@@ -20,6 +20,6 @@ class Solution {
 class SolutionEx {
     public static void main(String[] args) {
         Solution sol = new Solution();
-        System.out.println(Arrays.toString(sol.solution(3,12)));
+        System.out.println(Arrays.toString(sol.solution(8,12)));
     }
 }
