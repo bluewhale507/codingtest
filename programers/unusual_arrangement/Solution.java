@@ -18,11 +18,7 @@ class Solution {
                     difference[i] = difference[j];
                     difference[j] = temp;
                     System.out.println(difference[i]);
-                }
-            }
-            //입력값과의 차이가 같은경우 큰수가 앞에 오도록 함.
-            for(int j=i+1; j<difference.length; j++) {
-                if (Math.abs(difference[i]) == Math.abs(difference[j])) {
+                }else if (Math.abs(difference[i]) == Math.abs(difference[j])) {
                     difference[i] = (difference[i] > difference[j]) ? difference[i] : difference[j];
                     difference[j] = -difference[i];
                 }
