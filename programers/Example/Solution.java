@@ -2,21 +2,18 @@ package programers.Example;
 
 import java.util.Scanner;
 
-public class Solution {
-    public String solution(String my_string, String overwrite_string, int s) {
-        String answer = "";
+class Solution {
+    public int solution(int[] num_list) {
+        int mult = 1;
+        int sum = 0;
+        int answer = 0;
 
-        for (int i = 0; i < my_string.length(); i++) {
-            char currentChar = my_string.charAt(i);
-
-            if (i < s || i >= s + overwrite_string.length()) {
-                answer += currentChar;
-            } else {
-                 answer += overwrite_string;
-                 i += overwrite_string.length() - 1;
-            }
+        for(int i : num_list){
+            sum += i;
+            mult *= i;
         }
-        System.out.println(answer);
+
+        answer = Math.pow(sum,2) > mult ? 1 : 0;
 
         return answer;
     }
@@ -25,6 +22,6 @@ public class Solution {
 class SolutionEx {
     public static void main(String[] args){
         Solution sol = new Solution();
-        System.out.println(sol.solution("He11oWor1d","lloworl",2));
+        System.out.println(sol.solution(new int[] {3,4,5,2,1}));
     }
 }
